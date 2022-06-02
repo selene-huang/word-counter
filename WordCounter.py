@@ -78,7 +78,6 @@ def on_press(key, text):
     except AttributeError:
         d["last"] = key
         if d["move mode"]:
-            print(key)
             if key == keyboard.Key.right:
                 updateFrame(f, 10, 0)
             elif key == keyboard.Key.left:
@@ -108,7 +107,6 @@ listener.start()
 def updateFrame(frame, x, y):
     d["padx"] = min(max(0, d["padx"] + x), screensize[0] - size_x)
     d["pady"] = min(max(0, d["pady"] - y), screensize[1] - size_y)
-    print(d["padx"], d["pady"],screensize)
     frame.grid(padx=d["padx"], pady=d["pady"])
     root.update()
 
