@@ -17,7 +17,7 @@ screensize = user32.GetSystemMetrics(0), user32.GetSystemMetrics(1)
 size_x = 250
 size_y = 120
 
-whitespace = [keyboard.Key.space, keyboard.Key.enter, keyboard.Key.tab]
+whitespace = [keyboard.Key.space, keyboard.Key.enter, keyboard.Key.tab, '']
 counter_types = ["Word Count:", "Char Count:", "CC w/ Spaces:"]
 d_space = [4, 5, 1]
 d_type = ["wc", "cc", "cc_with_space"]
