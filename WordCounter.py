@@ -73,6 +73,15 @@ def on_press(key, text):
             elif key.char:
                 d["cc"] += 1
                 d["cc_with_space"] += 1
+        elif d["move mode"]:
+            if key == keyboard.Key.right:
+                updateFrame(f, 10, 0)
+            elif key == keyboard.Key.left:
+                updateFrame(f, -10, 0)
+            elif key == keyboard.Key.up:
+                updateFrame(f, 0, 10)
+            elif key == keyboard.Key.down:
+                updateFrame(f, 0, -10)
         d["last"] = key
         text.set("{0}{1}{2}".format(counter_types[d["type"]], getSpaces(), d[d_type[d["type"]]]))
     except AttributeError:
